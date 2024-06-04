@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motions Filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Motiuni</h1>
+    <div id="filters">
+
+        <input type="checkbox" id="disable-tema" checked>
+        <label for="tema">Theme:</label>
+        <select id="tema">
+            <option value="">All</option>
+        </select>
+        
+        <input type="checkbox" id="disable-limba" checked>
+        <label for="limba">Language:</label>
+        <select id="limba">
+            <option value="">All</option>
+        </select>
+        
+        <input type="checkbox" id="disable-nivel" checked>
+        <label for="nivel">Level:</label>
+        <select id="nivel">
+            <option value="">All</option>
+        </select>
+
+        <br>
+        <label for="advanced-enable">Advanced Filters</label>
+        <input type="checkbox" id="advanced-enable">
+        <br>
+
+        <div id="advanced-filters" unchecked>
+            <input type="checkbox" id="disable-competition" checked>
+            <label for="competition">Competition:</label>
+            <select id="competition">
+                <option value="">All</option>
+            </select>
+
+            <input type="checkbox" id="disable-p/i" checked>
+            <label for="p/i">P/I:</label>
+            <select id="p/i">
+                <option value="all">All</option>
+            </select>
+
+            <input type="checkbox" id="disable-tipologie" checked>
+            <label for="tipologie">Tipologie:</label>
+            <select id="tipologie">
+                <option value="all">All</option>
+            </select>
+
+            <input type="checkbox" id="disable-data" checked>
+            <label for="data">Data:</label>
+            <input type="date" id="date-max" min="2006-11-30" max="2025-01-01">
+            <input type="date" id="date-min" min="2006-11-30" max="2025-01-01">
+
+            <input type="checkbox" id="disable-motiune-contains" checked>
+            <label for="motiune-contains">Motiune contine:</label>
+            <input type="text" id="motiune-contains">
+
+            <input type="checkbox" id="disable-info-contains" checked>
+            <label for="info-contains">Infoslide contine:</label>
+            <input type="text" id="info-contains">
+
+            <input type="checkbox" id="disable-ca-contains" checked>
+            <label for="ca-contains">CA contine:</label>
+            <input type="text" id="ca-contains">
+        </div>
+        
+        <button id="filter-button">Filter</button>
+    </div>
+    
+    <div id="motions"></div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

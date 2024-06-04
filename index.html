@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motions Filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-title">
+        <h1>Generator de Motiuni</h1>
+        <button id="dark-mode-toggle" class="dark-mode-button">Dark Mode</button>
+    </div>
+
+    <div class="main-content">
+        <div class="main-filters main-subcontent">
+            <div class="main-button">
+                <button id="filter-button" class="filter-button">Genereaza</button>
+            </div>
+
+            <div id="default-filters">
+                <div class="default-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-tema" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-tema">Tema</label>
+                    <select id="tema">
+                        <option value="" selected>Toate temele</option>
+                    </select>
+                </div>
+
+                <div class="default-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-limba" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-limba">Limba</label>
+                    <select id="limba">
+                        <option value="" default>Toate limbile</option>
+                    </select>
+                </div>
+
+                <div class="default-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-nivel" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-nivel">Nivel</label>
+                    <select id="nivel">
+                        <option value="" selected>Toate nivelurile</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="main-advanced">
+                <label class="switch">
+                    <input type="checkbox" id="advanced-enable">
+                    <span class="slider"></span>
+                </label>
+                <label for="advanced-enable">Advanced Filters</label>
+            </div>
+
+            <div id="advanced-filters" style="display:none;">
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-competition" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-competition">Competitie</label>
+                    <select id="competition">
+                        <option value="" selected>Toate competitiile</option>
+                    </select>
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-p/i" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-p/i">Prepared/Impromptu</label>
+                    <select id="p/i">
+                        <option value="" selected>Prepared si Impromptu</option>
+                    </select>
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-tipologie" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-tipologie">Tipologie</label>
+                    <select id="tipologie">
+                        <option value="" selected>Toate tipologiile</option>
+                    </select>
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-infos" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-infos">Infoslide</label>
+                    <select id="infos">
+                        <option value="both" selected>Cu si fara Infoslide</option>
+                        <option value="with">Cu Infoslide</option>
+                        <option value="without">Fara Infoslide</option>
+                    </select>
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-data" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-data">Data</label>
+                    <input type="date" id="date-max" min="2006-11-30" max="2025-01-01">
+                    <input type="date" id="date-min" min="2006-11-30" max="2025-01-01">
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-motiune-contains" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-motiune-contains">Motiune Contine</label>
+                    <input type="text" id="motiune-contains" placeholder="ex: Rusia">
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-info-contains" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-info-contains">Infoslide Contine</label>
+                    <input type="text" id="info-contains" placeholder="ex: Parlament">
+                </div>
+
+                <div class="advanced-filter-component filter-component">
+                    <label class="switch">
+                        <input type="checkbox" id="disable-ca-contains" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="disable-ca-contains">CA Contine</label>
+                    <input type="text" id="ca-contains" placeholder="ex: Ganea">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-display main-subcontent">
+            <div id="main-display-motion" class="main-display-component"></div>
+            <div id="main-display-infoslide" class="main-display-component"></div>
+            <div id="main-display-other" class="main-display-component"></div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

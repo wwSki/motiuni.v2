@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-button {
+    position: absolute;
+    right: 2rem;
+}
+
+.main-title h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-subcontent {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.filter-component,
+.advanced-filter-component {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+select,
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+    margin-top: 1rem;
+    display: inline;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0066cc;
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.main-display-component {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .main-subcontent {
+        margin: 1rem 0;
+    }
+}
+
+body.dark-mode h1 {
+    color: #f4f4f9;
+}
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+}
+
+body.dark-mode .main-title {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+body.dark-mode .main-subcontent {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #f4f4f9;
+}
+
+body.dark-mode button:hover {
+    background-color: #555;
+}
+
+body.dark-mode select,
+body.dark-mode input[type="date"],
+body.dark-mode input[type="text"] {
+    background-color: #444;
+    color: #f4f4f9;
+    border: 1px solid #555;
+}
+
+body.dark-mode .slider {
+    background-color: #666;
+}
+
+body.dark-mode .slider:before {
+    background-color: #f4f4f9;
+}
+
+body.dark-mode input:checked + .slider {
+    background-color: #888;
+}
